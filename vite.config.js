@@ -11,5 +11,14 @@ export default defineConfig({
     }),],
      // 静态资源基础路径 base: './' || '',
      base: process.env.NODE_ENV === 'production' ? './' : '/',
-
+     server: {
+      proxy: {
+        '/api': {
+          target: 'http://106.13.7.125:9581/',
+          changeOrigin: true,
+          rewrite: (path) => path.replace(/^\/api/, '')
+        }
+      }
+   },
+  
 })
