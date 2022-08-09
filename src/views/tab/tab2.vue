@@ -16,8 +16,8 @@ const pwd=ref('')
 const content=ref('')
 const login =()=>{
     console.log(name.value)
-    conlsole.log(pwd.value)
-    proxy.axios.post('/api/login',{uid:name.value,pwd:pwd.value},res=>{
+    console.log(pwd.value)
+    proxy.axios.post('/login',{uid:name.value,pwd:pwd.value},res=>{
         console.log(res)
         sessionStorage.setItem('token_x',res[0].token_x)
         console.log(sessionStorage.getItem('token_x'))
