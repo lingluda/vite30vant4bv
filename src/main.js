@@ -13,4 +13,3 @@ app.use(Uploader)
 app.use(Button)
 app.mount('#app')
 app.config.globalProperties.axios = axios
-
