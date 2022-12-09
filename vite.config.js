@@ -13,10 +13,10 @@ export default defineConfig({
      base: process.env.NODE_ENV === 'production' ? './' : '/',
      server: {
       proxy: {
-        '/api': {
-          target: 'http://106.13.7.125:9581/',
+        '/WeCom': {
+          target: 'http://localhost:31792/PaperKB/WeCom',
           changeOrigin: true,
-          rewrite: (path) => path.replace(/^\/api/, '')
+          rewrite: (path) => path.replace(/^\/WeCom/, '')
         }
       }
    },

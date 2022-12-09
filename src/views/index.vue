@@ -1,13 +1,12 @@
 <template>
 <div>
- <router-view/>
-  <!-- <van-button type="primary">主要按钮</van-button> -->
-  <van-tabbar route>
-  <van-tabbar-item icon="home-o" replace to="/index/tab1">首頁</van-tabbar-item>
-  <van-tabbar-item icon="search" replace to="/index/tab2">信息</van-tabbar-item>
-  <van-tabbar-item icon="friends-o" replace to="/index/tab3">購物車</van-tabbar-item>
-  <van-tabbar-item icon="setting-o" replace to="/index/tab4">個人中心</van-tabbar-item>
-</van-tabbar>
+<van-grid>
+  <van-grid-item icon="photo-o" text="卷包生产日报" to="/tab1"/>
+  <van-grid-item icon="photo-o" text="卷包机台产量" to="/tab2"/>
+  <van-grid-item icon="photo-o" text="质量排名" to="/tab3"/>
+  <van-grid-item icon="photo-o" text="卷包生产安排" to="/tab4"/>
+</van-grid>
+
 </div>
 </template>
 <script lang="ts" setup>
