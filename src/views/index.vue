@@ -1,7 +1,7 @@
 <template>
 <div>
 <van-grid>
-  <van-grid-item icon="photo-o" v-for="i in menuData" v-if ="menuData.length>0" :text="i.NAME" :to="i.URL"/>
+  <van-grid-item v-for="i in menuData" v-if ="menuData.length>0" :text="i.NAME" :to="i.URL" :icon="i.IMG"/>
 </van-grid>
 
 </div>
