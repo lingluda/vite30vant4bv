@@ -8,7 +8,11 @@ import Login from '../views/index.vue'
 // 路由信息
 const routes = [
     {
-        path: "/",
+        path: '/',
+        redirect: '/index',
+      },
+    {
+        path: "/index",
         name: "index",
         component: Index,
         },

@@ -36,4 +36,28 @@ ajax.get = function (url, data, callback) {
         }
     })
 }
+ajax.getParams = function(url,prm){
+    var args = getUrlAllParams(url);
+    //如果要查找参数key:
+    if (args[prm] != undefined) {
+    //如果要查找参数key:
+    return args[prm];
+    } else {
+    return "";
+    }
+    }
+function getUrlAllParams(url) {
+    var args = new Object();
+    var query = url;
+    query=query.substring(query.lastIndexOf('?')+1)
+    var pairs = query.split("&"); //在逗号处断开
+    for (var i = 0; i < pairs.length; i++) {
+    var pos = pairs[i].indexOf('='); //查找name=value
+    if (pos == -1) continue; //如果没有找到就跳过
+    var argname = pairs[i].substring(0, pos); //提取name
+    var value = pairs[i].substring(pos + 1); //提取value
+    args[argname] = unescape(value); //存为属性
+    }
+    return args;
+    }
 export default ajax;

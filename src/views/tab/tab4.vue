@@ -72,12 +72,10 @@
             const init = () =>{
                 proxy.ajax.post('WeCom/dps_packworkorder',{date:sdate.value},res=>{
                     proxy.TableData =res
-                    console.log(res)
                 })
             }
             //onMounted(init)
             watchEffect(()=>{
-                console.log(sdate.value)
                 init()
             })
             //初始化

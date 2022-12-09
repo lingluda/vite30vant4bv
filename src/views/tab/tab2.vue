@@ -134,16 +134,13 @@ export default {
         //饼图end
         const inits = () =>{
                 proxy.ajax.post('WeCom/prm_packworkorderoutput_eqm',{sdate:sdate.value,edate:edate.value},res=>{
-                    console.log(res)
                     let name = res.map(item=>{return item.EQUIPMENTNAME.replace('包装机','')})
                     let qty = res.map(item=>{return item.QUANTITY})
-                    //console.log(tt)
                     create1('myChart0',name,qty)
                 })
             }
          //onMounted(init)
            //watchEffect(()=>{
-           //      console.log(1111111111)
            //      init(),inits()
            //  })
         //柱状图
